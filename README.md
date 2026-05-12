@@ -1,10 +1,12 @@
 # 🔁 Runloop
 
-> **Background command collections with auto-restart — macOS utility.**
+> **Background command collections with auto-restart — cross-platform desktop utility.**
 
 🇵🇸 *Built with love. Free Palestine.*
 
-Runloop is a native **macOS menu-bar app** built with Flutter that lets you group shell commands into named **collections**, run them all at once, and automatically restart any command that exits — keeping your background processes alive without any babysitting.
+Runloop is a **cross-platform desktop app** built with Flutter that lets you group shell commands into named **collections**, run them all at once, and automatically restart any command that exits — keeping your background processes alive without any babysitting.
+
+> 🖥️ Supported platforms: **macOS** · **Linux** · **Windows**
 
 ---
 
@@ -20,6 +22,8 @@ Runloop is a native **macOS menu-bar app** built with Flutter that lets you grou
 - 🔄 **Auto-Restart** — Each command is automatically respawned 1 second after it exits
 - 🚀 **Auto-Run on App Start** — Mark collections to start automatically when the app launches
 - 🖥️ **macOS Menu-Bar Integration** — Lives in the system tray; always accessible, never in the way
+- 🐧 **Linux Support** — Runs natively on Linux desktops
+- 🪟 **Windows Support** — Runs natively on Windows 10/11
 - 🔐 **Launch at Login** — Optionally start Runloop automatically when you log in to macOS
 - 💾 **SQLite Persistence** — All collections are saved locally using Drift (SQLite)
 - 🛑 **Stop All** — One-click stop for every running collection
@@ -67,7 +71,9 @@ lib/
 | Flutter | `^3.x` (SDK `^3.11.3`) |
 | Dart | `^3.11.3` |
 | macOS | 12+ recommended |
-| Xcode | Latest stable |
+| Linux | Any modern distro with GTK 3 |
+| Windows | Windows 10 / 11 |
+| Xcode | Latest stable *(macOS only)* |
 
 ### Steps
 
@@ -79,17 +85,21 @@ cd Runloop
 # 2. Install Flutter dependencies
 flutter pub get
 
-# 3. Run on macOS
-flutter run -d macos
+# 3. Run on your platform
+flutter run -d macos    # macOS
+flutter run -d linux    # Linux
+flutter run -d windows  # Windows
 ```
 
-To build a release `.app`:
+To build a release binary:
 
 ```bash
-flutter build macos --release
+flutter build macos --release    # macOS
+flutter build linux --release    # Linux
+flutter build windows --release  # Windows
 ```
 
-The built app will be in `build/macos/Build/Products/Release/runloop.app`.
+The built app will be in `build/<platform>/Build/Products/Release/`.
 
 ---
 
