@@ -2,7 +2,7 @@
 
 > **Background command collections with auto-restart — cross-platform desktop utility.**
 
-🇵🇸 *Built with love. Free Palestine.*
+🇵🇸 _Built with love. Free Palestine._
 
 Runloop is a **cross-platform desktop app** built with Flutter that lets you group shell commands into named **collections**, run them all at once, and automatically restart any command that exits — keeping your background processes alive without any babysitting.
 
@@ -66,14 +66,14 @@ lib/
 
 ### Prerequisites
 
-| Requirement | Version |
-|---|---|
-| Flutter | `^3.x` (SDK `^3.11.3`) |
-| Dart | `^3.11.3` |
-| macOS | 12+ recommended |
-| Linux | Any modern distro with GTK 3 |
-| Windows | Windows 10 / 11 |
-| Xcode | Latest stable *(macOS only)* |
+| Requirement | Version                      |
+| ----------- | ---------------------------- |
+| Flutter     | `^3.x` (SDK `^3.11.3`)       |
+| Dart        | `^3.11.3`                    |
+| macOS       | 12+ recommended              |
+| Linux       | Any modern distro with GTK 3 |
+| Windows     | Windows 10 / 11              |
+| Xcode       | Latest stable _(macOS only)_ |
 
 ### Steps
 
@@ -130,7 +130,7 @@ The built app will be in `build/<platform>/Build/Products/Release/`.
 
 - Navigate to **Settings** (tune icon in the app bar).
 - Toggle **Launch at Login** to have Runloop start automatically on macOS login.
-  - This is locked to `on` if any collection has *Auto-run on app start* enabled.
+  - This is locked to `on` if any collection has _Auto-run on app start_ enabled.
 
 ---
 
@@ -138,12 +138,12 @@ The built app will be in `build/<platform>/Build/Products/Release/`.
 
 Runloop follows a **clean / layered architecture**:
 
-| Layer | Responsibility |
-|---|---|
-| `domain` | Pure entities & repository contracts — zero Flutter dependencies |
-| `application` | Use-case logic: `CollectionSupervisor` orchestrates process lifecycle |
-| `infrastructure` | Drift/SQLite repositories, shell process execution, OS integrations |
-| `presentation` | Flutter widgets, screens, `ValueNotifier`-based state, tray controller |
+| Layer            | Responsibility                                                         |
+| ---------------- | ---------------------------------------------------------------------- |
+| `domain`         | Pure entities & repository contracts — zero Flutter dependencies       |
+| `application`    | Use-case logic: `CollectionSupervisor` orchestrates process lifecycle  |
+| `infrastructure` | Drift/SQLite repositories, shell process execution, OS integrations    |
+| `presentation`   | Flutter widgets, screens, `ValueNotifier`-based state, tray controller |
 
 Dependency injection is handled by **get_it** (`service_locator.dart`), and navigation by **go_router**.
 
@@ -151,16 +151,16 @@ Dependency injection is handled by **get_it** (`service_locator.dart`), and navi
 
 ## 📦 Key Dependencies
 
-| Package | Purpose |
-|---|---|
-| `drift` + `sqlite3_flutter_libs` | Local SQLite database |
-| `tray_manager` | macOS system tray icon & menu |
-| `window_manager` | macOS window control |
-| `launch_at_startup` | Launch at login integration |
-| `go_router` | Declarative navigation |
-| `get_it` | Service locator / DI |
-| `flutter_animate` | Smooth UI animations |
-| `package_info_plus` | App metadata |
+| Package                          | Purpose                       |
+| -------------------------------- | ----------------------------- |
+| `drift` + `sqlite3_flutter_libs` | Local SQLite database         |
+| `tray_manager`                   | macOS system tray icon & menu |
+| `window_manager`                 | macOS window control          |
+| `launch_at_startup`              | Launch at login integration   |
+| `go_router`                      | Declarative navigation        |
+| `get_it`                         | Service locator / DI          |
+| `flutter_animate`                | Smooth UI animations          |
+| `package_info_plus`              | App metadata                  |
 
 ---
 
@@ -170,4 +170,4 @@ MIT © 2026
 
 ---
 
-🇵🇸 *Free Palestine. From the river to the sea.*
+🇵🇸 _Free Palestine. From the river to the sea._
